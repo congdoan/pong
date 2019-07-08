@@ -1,11 +1,8 @@
 push = require 'push'
-
 WINDOW_WIDTH = 1280
 WINDOW_HEIGHT = 720
-
 VIRTUAL_WIDTH = 432
 VIRTUAL_HEIGHT = 243
-
 PADDLE_SPEED = 200
 
 function love.load()
@@ -22,10 +19,8 @@ function love.load()
     player2Y = VIRTUAL_HEIGHT - 50
     ballX = VIRTUAL_WIDTH / 2 - 2
     ballY = VIRTUAL_HEIGHT / 2 - 2
-
     ballDX = math.random(2) == 1 and 100 or -100
     ballDY = math.random(-50, 50)
-
     gameState = 'start'
 end
 
@@ -56,10 +51,8 @@ function love.keypressed(key)
             gameState = 'play'
         else
             gameState = 'start'
-            
             ballX = VIRTUAL_WIDTH / 2 - 2
             ballY = VIRTUAL_HEIGHT / 2 - 2
-
             ballDX = math.random(2) == 1 and 100 or -100
             ballDY = math.random(-50, 50) * 1.5
         end
